@@ -1,0 +1,30 @@
+{
+  "name": "pluto-crypto-tracker",
+  "version": "1.0.0",
+  "description": "Real-time cryptocurrency price streaming application",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"pnpm run backend:dev\" \"pnpm run frontend:dev\"",
+    "backend:dev": "cd backend && pnpm dev",
+    "frontend:dev": "cd frontend && pnpm dev",
+    "build": "cd backend && pnpm build && cd ../frontend && pnpm build",
+    "start": "cd backend && pnpm start"
+  },
+  "devDependencies": {
+    "@connectrpc/protoc-gen-connect-es": "^1.5.0",
+    "@bufbuild/protoc-gen-es": "^1.10.0",
+    "buf": "^0.1.1",
+    "concurrently": "^9.2.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["playwright"]
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

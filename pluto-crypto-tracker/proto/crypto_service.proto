@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package crypto.v1;
+
+service CryptoPriceService {
+  rpc AddTicker(AddTickerRequest) returns (AddTickerResponse);
+  rpc RemoveTicker(RemoveTickerRequest) returns (RemoveTickerResponse);
+  rpc GetTickers(GetTickersRequest) returns (GetTickersResponse);
+  rpc StreamPrices(StreamPricesRequest) returns (stream PriceUpdate);
+}
+
+message AddTickerRequest {
+  string ticker = 1;
+}
+
+message AddTickerResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+message RemoveTickerRequest {
+  string ticker = 1;
+}
+
+message RemoveTickerResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+message GetTickersRequest {}
+
+message GetTickersResponse {
+  repeated string tickers = 1;
+}
+
+message StreamPricesRequest {}
+
+message PriceUpdate {
+  string ticker = 1;
+  double price = 2;
+  double change_percent = 3;
+  int64 timestamp = 4;
+}

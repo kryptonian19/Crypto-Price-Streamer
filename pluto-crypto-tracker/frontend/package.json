@@ -1,0 +1,30 @@
+{
+  "name": "pluto-crypto-tracker-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for crypto price streaming",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "generate": "buf generate --template ../buf.gen.yaml ../proto"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "^1.10.0",
+    "@connectrpc/connect": "^1.5.0",
+    "@connectrpc/connect-web": "^1.5.0",
+    "next": "^14.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@connectrpc/protoc-gen-connect-es": "^1.5.0",
+    "@bufbuild/protoc-gen-es": "^1.10.0",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.0.4",
+    "typescript": "^5.9.2"
+  }
+}

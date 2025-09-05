@@ -1,0 +1,22 @@
+version: v1
+plugins:
+  - plugin: es
+    out: backend/src/gen
+    opt:
+      - target=ts
+      - import_extension=none
+  - plugin: connect-es
+    out: backend/src/gen
+    opt:
+      - target=ts
+      - import_extension=none
+  - plugin: es
+    out: frontend/src/gen
+    opt:
+      - target=ts
+      - import_extension=none
+  - plugin: connect-es
+    out: frontend/src/gen
+    opt:
+      - target=ts
+      - import_extension=none
