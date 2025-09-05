@@ -4,7 +4,7 @@ A high-performance, real-time cryptocurrency price streaming application that sc
 
 ## Overview
 
-This full-stack application provides real-time cryptocurrency price monitoring by extracting live price data from TradingView using browser automation. Built with a scalable Node.js backend and responsive Next.js frontend, it delivers price updates to multiple clients simultaneously with sub-second latency.
+This full-stack application provides real-time cryptocurrency price monitoring by extracting live price data from TradingView using browser automation. Built with a scalable Node.js backend and responsive Next.js frontend, it delivers price updates to multiple clients simultaneously with sub-second latency. A working video of the project is attached in the repository.
 
 ## Key Features
 
